@@ -1,7 +1,7 @@
 <div class="container">
     <div>
         <h2> User Details</h2>
-        <button class="btn btn-danger"><i class="fa fa-plus"></i> Add User</button>
+        <button class="btn btn-danger" (click)="addUpdateUser('add')"><i class="fa fa-plus"></i> Add User</button>
 
         <table class="table table-striped">
             <thead>
@@ -27,7 +27,7 @@
                     <td>{{user.age}}</td>
                     <td>{{user.salary}}</td>
                     <td>
-                        <button class="btn btn-success mr-3"><i class="fa fa-edit"></i> Edit</button>
+                        <button class="btn btn-success mr-3" (click)="addUpdateUser('update',user)"><i class="fa fa-edit"></i> Edit</button>
                         <button class="btn btn-danger" (click)="deleteUser(user.firstName+' '+user.lastName,indx)"><i
                                 class="fa fa-trash"></i> Delete</button>
                     </td>
