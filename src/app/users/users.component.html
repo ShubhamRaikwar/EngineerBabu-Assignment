@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+        <h2> User Details</h2>
+        <button class="btn btn-danger"><i class="fa fa-plus"></i> Add User</button>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users;let indx=index;">
+                    <td scope="row">{{user.id}}</td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.mobile}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.salary}}</td>
+                    <td>
+                        <button class="btn btn-success mr-3"><i class="fa fa-edit"></i> Edit</button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
