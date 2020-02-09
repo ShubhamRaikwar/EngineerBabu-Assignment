@@ -26,7 +26,7 @@ export class UsersComponent implements OnInit {
 			"mobile": 1547895478,
 			"salary": 25874,
 			"age": 20
-		},{
+		}, {
 			"id": 103,
 			"firstName": "Nilesh",
 			"lastName": "Rathore",
@@ -34,7 +34,7 @@ export class UsersComponent implements OnInit {
 			"mobile": 1265478654,
 			"salary": 52154,
 			"age": 18
-		},{
+		}, {
 			"id": 104,
 			"firstName": "Krishna",
 			"lastName": "Kumar",
@@ -49,5 +49,11 @@ export class UsersComponent implements OnInit {
 
 	ngOnInit() {
 
+	}
+
+	deleteUser(userName: string, index: number): void {
+		if (confirm("Are you sure want to delete user - " + userName +'?')) {
+			this.users.splice(index, 1);
+		}
 	}
 }

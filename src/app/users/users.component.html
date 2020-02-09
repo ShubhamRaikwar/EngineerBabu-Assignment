@@ -28,7 +28,8 @@
                     <td>{{user.salary}}</td>
                     <td>
                         <button class="btn btn-success mr-3"><i class="fa fa-edit"></i> Edit</button>
-                        <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                        <button class="btn btn-danger" (click)="deleteUser(user.firstName+' '+user.lastName,indx)"><i
+                                class="fa fa-trash"></i> Delete</button>
                     </td>
                 </tr>
             </tbody>
