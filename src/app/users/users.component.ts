@@ -65,12 +65,12 @@ export class UsersComponent implements OnInit {
 		const dialogConfig = new MatDialogConfig();
 		dialogConfig.disableClose = true;
 		dialogConfig.autoFocus = true;
-		if (type == 'update'){
+		if (type == 'update') {
 			dialogConfig.data = userData;
-		}else{
+		} else {
 			dialogConfig.data = null;
 		}
-			
+
 		const dialogRef = this.dialog.open(AddUpdateUserComponent, dialogConfig);
 		dialogRef.afterClosed().subscribe(
 			data => {
